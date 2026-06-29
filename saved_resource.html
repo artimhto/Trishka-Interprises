@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trishka Interprises | Premium Baby Products</title>
+    
+    <!-- Google Fonts for a friendly, professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Social & Contact Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            /* Soft pastel gradient for baby theme */
+            background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism Class */
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* Header / Hero Section */
+        .header-container {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Dynamic Animated Heading */
+        h1.dynamic-heading {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #ff758c, #ff7eb3, #5ee7df, #b490ca);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300%;
+            animation: shine 5s linear infinite;
+            text-shadow: 2px 5px 15px rgba(255, 117, 140, 0.2);
+            letter-spacing: 2px;
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        /* Discount Panel Styles */
+        .discount-panel {
+            width: 100%;
+            max-width: 900px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discount-text {
+            flex: 1;
+        }
+
+        .discount-tag {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: #fff;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(255, 117, 140, 0.3);
+        }
+
+        .discount-text h2 {
+            font-size: 2.2rem;
+            color: #222;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .discount-text p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .discount-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            color: #ff758c;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 12px 12px 42px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            background: #fff;
+            border-color: #ff758c;
+            box-shadow: 0 0 10px rgba(255, 117, 140, 0.2);
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.3);
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 117, 140, 0.5);
+        }
+
+        /* Slider Section */
+        .slider-section {
+            width: 100%;
+            max-width: 1000px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #444;
+            font-size: 2rem;
+        }
+
+        .slider-container {
+            display: flex;
+            width: calc(200px * 14); /* 7 items * 2 for seamless loop */
+            animation: scroll 20s linear infinite;
+        }
+
+        /* Pause animation on hover */
+        .slider-container:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-200px * 7)); }
+        }
+
+        .product-card {
+            width: 180px;
+            height: 220px;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .product-card:hover {
+            transform: scale(1.05) translateY(-10px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .product-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Contact & Social Section */
+        .contact-container {
+            width: 100%;
+            max-width: 900px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .contact-info i {
+            color: #ff758c;
+            margin-right: 8px;
+        }
+
+        /* Social Buttons */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: #fff;
+        }
+
+        .social-btn.insta:hover { color: #E1306C; }
+        .social-btn.fb:hover { color: #1877F2; }
+        .social-btn.wa:hover { color: #25D366; }
+        .social-btn.map:hover { color: #EA4335; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1.dynamic-heading { font-size: 2.5rem; }
+            .header-container { padding: 2rem 1rem; }
+            .discount-panel { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+            .discount-form { max-width: 100%; }
+            .product-card { width: 140px; height: 180px; }
+            .product-card img { width: 90px; height: 90px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header-container glass">
+        <h1 class="dynamic-heading">TRISHKA INTERPRISES</h1>
+        <p class="subtitle">Bringing the Best for Your Newborn Babies 👶🍼</p>
+    </header>
+
+    <!-- Discount & Login Panel Section -->
+    <section class="discount-panel glass">
+        <div class="discount-text">
+            <span class="discount-tag"><i class="fa-solid fa-bolt"></i> LIMITED OFFER</span>
+            <h2>Get Flat 30% OFF!</h2>
+            <p>Log in to your account today and unlock exclusive premium deals for your little one.</p>
+        </div>
+        <form class="discount-form" action="https://www.codechef.com/html-online-compiler#" method="POST">
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email Address" required="">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" required="">
+            </div>
+            <button type="submit" class="login-btn">Log In &amp; Claim Discount</button>
+        </form>
+    </section>
+
+    <!-- Products Slider Section -->
+    <section class="slider-section glass">
+        <h2>Our Premium Brands</h2>
+        <div class="slider-container">
+            <!-- First Set -->
+            <div class="product-card">
+                <img src="https://www.chicco.in/cdn/shop/files/chicco-bravo-trio-travel-system-camden.webp?v=1770891928&amp;width=1500" alt="YOYO2">
+                <h3>YOYO2</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://accessworld.in/cdn/shop/files/bmw_1.webp?v=1745404868&amp;width=1000" alt="NUNA">
+                <h3>NUNA</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTo58_h0eaKKpFjgVo81bMAHsALmMVF05MlJl4S7z8186tqJxFS0vzzxEzERuPTGrE2BoTfejJ4PQv8wQUc-ik7azci77iM" alt="HIPP">
+                <h3>HIPP</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTtN6IBHQxiaa0P3QTdY0rQUJ6ZgtQlfueJRuUjApLH9N2ilJVPwdfF7PK9QjXrNA7lhEnNP9B_ELIvi82oS4m-sxE2KCbk8i7fsKouPLLh6ftbIObvmS3atg" alt="NANNY CARE">
+                <h3>NANNY CARE</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://ibabyxpress.com/cdn/shop/files/APTA2800a.webp?v=1764172257&amp;width=1800" alt="APTAMIL">
+                <h3>APTAMIL</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvXS_EaQd_dNZ-iILh-78p61TmfVHj6MDeHZqT_IM7Ufd-zv3LJozmnUoO&amp;s=10" alt="SIMILAC">
+                <h3>SIMILAC</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://ibabyxpress.com/cdn/shop/files/Untitleddesign_6.png?v=1745828065&amp;width=1800" alt="KENDAMIL">
+                <h3>KENDAMIL</h3>
+            </div>
+
+            <!-- Second Set (Duplicate for seamless scroll) -->
+            <div class="product-card">
+                <img src="https://www.chicco.in/cdn/shop/files/chicco-bravo-trio-travel-system-camden.webp?v=1770891928&amp;width=1500" alt="YOYO2">
+                <h3>YOYO2</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://accessworld.in/cdn/shop/files/bmw_1.webp?v=1745404868&amp;width=1000" alt="NUNA">
+                <h3>NUNA</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTo58_h0eaKKpFjgVo81bMAHsALmMVF05MlJl4S7z8186tqJxFS0vzzxEzERuPTGrE2BoTfejJ4PQv8wQUc-ik7azci77iM" alt="HIPP">
+                <h3>HIPP</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTtN6IBHQxiaa0P3QTdY0rQUJ6ZgtQlfueJRuUjApLH9N2ilJVPwdfF7PK9QjXrNA7lhEnNP9B_ELIvi82oS4m-sxE2KCbk8i7fsKouPLLh6ftbIObvmS3atg" alt="NANNY CARE">
+                <h3>NANNY CARE</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://ibabyxpress.com/cdn/shop/files/APTA2800a.webp?v=1764172257&amp;width=1800" alt="APTAMIL">
+                <h3>APTAMIL</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvXS_EaQd_dNZ-iILh-78p61TmfVHj6MDeHZqT_IM7Ufd-zv3LJozmnUoO&amp;s=10" alt="SIMILAC">
+                <h3>SIMILAC</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://ibabyxpress.com/cdn/shop/files/Untitleddesign_6.png?v=1745828065&amp;width=1800" alt="KENDAMIL">
+                <h3>KENDAMIL</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Social Section -->
+    <section class="contact-container glass">
+        <div class="contact-info">
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong> 59A DDA Cycle Market Jhandewalan, New Delhi -110055</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> <a href="tel:+919910875152" style="color:inherit; text-decoration:none;">+91 9910875152</a> / <a href="tel:+918384022642" style="color:inherit; text-decoration:none;">8384022642</a></p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:trishkainterprises@yahoo.com" style="color:inherit; text-decoration:none;">trishkainterprises@yahoo.com</a></p>
+        </div>
+
+        <div class="social-links">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ajit59a?utm_source=qr&amp;igsh=bGlxdXRnNjhhcWtl" target="_blank" class="social-btn insta" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100010882213135&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" class="social-btn fb" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/qr/BPHQAEQ7BMXJC1" target="_blank" class="social-btn wa" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <!-- Google Maps -->
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=59A+DDA+Cycle+Market+Jhandewalan,+New+Delhi+-110055" target="_blank" class="social-btn map" title="Google Maps">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </a>
+        </div>
+    </section>
+
+
+
+<style>
+</style>
+<script>
+// your code goes here
+</script></body></html>
